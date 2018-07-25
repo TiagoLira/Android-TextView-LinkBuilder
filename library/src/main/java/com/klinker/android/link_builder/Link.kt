@@ -26,6 +26,7 @@ class Link {
     @JvmField var pattern: Pattern? = null
     @JvmField var prependedText: String? = null
     @JvmField var appendedText: String? = null
+    @JvmField var replacementText: String? = null
     @JvmField var textColor = 0
     @JvmField var textColorOfHighlightedLink = 0
     @JvmField var highlightAlpha = DEFAULT_ALPHA
@@ -43,6 +44,7 @@ class Link {
         this.text = link.text
         this.prependedText = link.prependedText
         this.appendedText = link.appendedText
+        this.replacementText = link.replacementText
         this.pattern = link.pattern
         this.clickListener = link.clickListener
         this.longClickListener = link.longClickListener
@@ -111,6 +113,16 @@ class Link {
      */
     fun setAppendedText(text: String): Link {
         this.appendedText = text
+        return this
+    }
+
+    /**
+     * This text will replace any matches.
+     * @param text to place in place of the link's text.
+     * @return the current link object.
+     */
+    fun setReplacementText(text: String): Link {
+        this.replacementText = text
         return this
     }
 

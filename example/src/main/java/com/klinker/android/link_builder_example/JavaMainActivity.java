@@ -108,7 +108,7 @@ public class JavaMainActivity extends AppCompatActivity {
         prepend.setPrependedText("(!)");
 
         Link appended = new Link("appended");
-        appended.setAppendedText("(!)");
+        appended.setReplacementText("REPLACED");
 
         // link to our play store page
         Link playStore = new Link("Play Store");

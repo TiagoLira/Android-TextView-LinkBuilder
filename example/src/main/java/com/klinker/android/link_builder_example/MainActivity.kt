@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 .setTextColor(Color.parseColor("#FF0000"))
 
         val prepend = Link("prepended").setPrependedText("(!)")
-        val appended = Link("appended").setAppendedText("(!)")
+        val appended = Link("appended").setReplacementText("REPLACED")
 
         val playStore = Link("Play Store")
                 .setTextColor(Color.parseColor("#FF9800"))

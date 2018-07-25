@@ -270,6 +270,13 @@ class LinkBuilder {
                 text = TextUtils.replace(text, arrayOf(link.text), arrayOf(totalText))
                 links[i].setText(totalText)
             }
+
+            if (link.replacementText != null) {
+                val totalText = link.replacementText!!
+
+                text = TextUtils.replace(text, arrayOf(link.text), arrayOf(totalText))
+                links[i].setText(totalText)
+            }
         }
     }
 
